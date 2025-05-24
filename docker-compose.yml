@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - apinet
+ 
+networks:
+  apinet:
+    driver: bridge
